@@ -67,11 +67,19 @@ export default function LandingPage() {
                 </div>
                 <div className="flex items-center gap-4 text-sm text-gray-500">
                   <div className="flex -space-x-2">
-                    {[1, 2, 3, 4].map((i) => (
+                    {[1, 2, 3, 4, 5].map((i) => (
                       <div
                         key={i}
-                        className="w-8 h-8 rounded-full bg-gradient-to-br from-purple-500 to-pink-500 border-2 border-white dark:border-gray-900"
-                      />
+                        className="w-8 h-8 rounded-full border-2 border-white dark:border-gray-900 overflow-hidden"
+                      >
+                        <Image
+                          src={`/profile ${i}.jpeg`}
+                          alt={`Profile ${i}`}
+                          width={32}
+                          height={32}
+                          className="w-full h-full object-cover"
+                        />
+                      </div>
                     ))}
                   </div>
                   <p>
@@ -88,15 +96,21 @@ export default function LandingPage() {
                         C
                       </div>
                       <div>
-                        <h3 className="font-semibold">Carlinha</h3>
-                        <p className="text-sm text-gray-500">@carlinha</p>
+                        <h3 className="font-semibold">Paulinha</h3>
+                        <p className="text-sm text-gray-500">@paulinhasouza</p>
                       </div>
                       <Badge className="ml-auto bg-gradient-to-r from-pink-500 to-pink-600">Criadora</Badge>
                     </div>
                   </div>
                   <div className="aspect-video bg-gray-100 dark:bg-gray-700 relative">
-                    <div className="absolute inset-0 flex items-center justify-center">
-                      <Lock className="h-12 w-12 text-gray-400" />
+                    <Image
+                      src="/blur.jpeg"
+                      alt="Preview bloqueado"
+                      fill
+                      className="object-cover"
+                    />
+                    <div className="absolute inset-0 backdrop-blur-sm bg-black/20 flex items-center justify-center">
+                      <Lock className="h-12 w-12 text-white" />
                     </div>
                     <div className="absolute bottom-4 right-4">
                       <Button size="sm" className="bg-gradient-to-r from-pink-500 to-pink-600">
