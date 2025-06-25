@@ -113,9 +113,11 @@ export default function LandingPage() {
                       <Lock className="h-12 w-12 text-white" />
                     </div>
                     <div className="absolute bottom-4 right-4">
-                      <Button size="sm" className="bg-gradient-to-r from-pink-500 to-pink-600">
-                        Desbloquear
-                      </Button>
+                      <Link href="https://app.praivy.com.br">
+                        <Button size="sm" className="bg-gradient-to-r from-pink-500 to-pink-600">
+                          Desbloquear
+                        </Button>
+                      </Link>
                     </div>
                   </div>
                   <div className="p-4">
